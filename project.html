@@ -4,60 +4,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Описание проекта Personal Dashboard в портфолио Романа.">
+  <title>Personal Dashboard — Роман</title>
   <link rel="stylesheet" href="style.css">
-
-  <title>Personal Dashboard</title>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-
-  <header>
-    <div class="logo">Роман</div>
-
-    <nav>
-      <a href="index.html">Главная</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Роман — главная">Роман<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+        aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="primary-navigation" aria-label="Основная навигация">
+        <a href="index.html#about">Обо мне</a>
+        <a href="index.html#skills">Навыки</a>
+        <a href="index.html#projects">Проекты</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="page-width project-detail">
+    <a class="back-link" href="index.html#projects"><span aria-hidden="true">←</span> Все проекты</a>
+    <section class="project-intro" aria-labelledby="project-title">
+      <p class="eyebrow">Личный проект</p>
+      <h1 id="project-title">Personal Dashboard</h1>
+      <p class="project-lead">Идея личной панели для организации задач, учёбы и финансов. Здесь собраны предполагаемые
+        разделы проекта; готовая публичная версия пока не опубликована.</p>
+    </section>
 
-    <section class="project-page">
-      <h1>Personal Dashboard</h1>
-
-      <p>
-        Personal Dashboard — приложение на Python
-        для управления задачами, учёбой и финансами.
-      </p>
-
-      <h2>Что умеет</h2>
-
-      <div class="features">
-        <div>Управление задачами</div>
-        <div>Учёт финансов</div>
-        <div>Статистика</div>
-        <div>Планирование учёбы</div>
+    <section class="detail-section" aria-labelledby="features-title">
+      <div class="section-heading">
+        <p class="eyebrow">Концепция проекта</p>
+        <h2 id="features-title">Основные разделы</h2>
       </div>
-
-      <h2>Технологии</h2>
-
-      <div class="skills">
-        <div>Python</div>
-        <div>HTML</div>
-        <div>CSS</div>
-      </div>
-
-      <div class="project-links">
-        <a href="#">GitHub</a>
-        <a href="index.html">← Вернуться к проектам</a>
+      <div class="features-grid">
+        <article class="feature-card"><span class="feature-number">01</span>
+          <h3>Задачи</h3>
+          <p>Раздел для планирования повседневных дел.</p>
+        </article>
+        <article class="feature-card"><span class="feature-number">02</span>
+          <h3>Учёба</h3>
+          <p>Место для учебных задач и планов.</p>
+        </article>
+        <article class="feature-card"><span class="feature-number">03</span>
+          <h3>Финансы</h3>
+          <p>Идея учёта доходов и расходов.</p>
+        </article>
+        <article class="feature-card"><span class="feature-number">04</span>
+          <h3>Статистика</h3>
+          <p>Предполагаемый обзор данных и активности.</p>
+        </article>
       </div>
     </section>
 
-  </main>
-  <footer>
-    <p>Моё портфолио © 2026</p>
-  </footer>
+    <section class="detail-section tech-section" aria-labelledby="tech-title">
+      <div class="section-heading">
+        <p class="eyebrow">Стек проекта</p>
+        <h2 id="tech-title">Технологии</h2>
+      </div>
+      <ul class="tag-list" aria-label="Технологии проекта">
+        <li>Python</li>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+    </section>
 
+    <div class="project-actions">
+      <a class="button button-primary" href="https://github.com/malkree/personal-assistant-bot.git" target="_blank"
+        rel="noopener noreferrer">
+        Открыть GitHub ↗
+      </a>
+
+      <a class="button button-secondary" href="index.html#projects">
+        Вернуться на главную
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner"><a class="logo" href="index.html">Роман<span>.</span></a>
+      <p>© 2026 · Портфолио</p>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -4,79 +4,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Портфолио">
+  <title>Роман — Python Developer</title>
   <link rel="stylesheet" href="style.css">
-
-  <title>Моё портфолио</title>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-
-  <header>
-    <div class="logo">Роман</div>
-
-    <nav>
-      <a href="#about">Обо мне</a>
-      <a href="#skills">Навыки</a>
-      <a href="#projects">Проекты</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Роман — главная">DezeR<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+        aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="primary-navigation" aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#projects">Проекты</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-
-    <section id="about">
-      <h2>Обо мне</h2>
-      <p>Я изучаю программирование и создаю свои проекты.</p>
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">
+          Python Developer
+        </p>
+        <h1 id="hero-title">Привет, я <span>Рома</span></h1>
+        <p class="hero-description">Изучаю программирование и создаю собственные проекты на Python и для веба.</p>
+        <a href="#projects" class="button button-primary">Смотреть проекты <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-mark" aria-hidden="true"><span>{ }</span><i></i></div>
     </section>
 
-    <section id="skills">
-      <h2>Мои навыки</h2>
+    <section class="section page-width about-section" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">Немного обо мне</p>
+        <h2 id="about-title">Обо мне</h2>
+      </div>
+      <p class="about-copy">Я начинающий разработчик, который изучает Python, C, C++ и веб-технологии. Практикуюсь на
+        собственных проектах и постепенно расширяю знания, чтобы создавать полезные приложения и сайты</p>
+    </section>
 
-      <div class="skills">
-        <div>Python</div>
-        <div>HTML</div>
-        <div>CSS</div>
+    <section class="section page-width" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="eyebrow">Инструменты и технологии</p>
+        <h2 id="skills-title">Навыки</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card"><span class="skill-index">01</span>
+          <h3>Python</h3>
+          <p>Изучаю язык и применяю его в своих проектах.</p>
+        </article>
+        <article class="skill-card"><span class="skill-index">02</span>
+          <h3>HTML</h3>
+          <p>Использую для структуры веб-страниц.</p>
+        </article>
+        <article class="skill-card"><span class="skill-index">03</span>
+          <h3>CSS</h3>
+          <p>Оформляю страницы и адаптирую их под разные экраны.</p>
+        </article>
+        <article class="skill-card"><span class="skill-index">04</span>
+          <h3>JavaScript</h3>
+          <p>Изучаю основы интерактивности в браузере.</p>
+        </article>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Мои проекты</h2>
-
-      <div class="projects">
-
-        <div class="project">
+    <section class="section page-width projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Практика и эксперименты</p>
+        <h2 id="projects-title">Проекты</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-card-top"><span class="project-type">Личный проект</span><span class="project-arrow"
+              aria-hidden="true">↗</span></div>
           <h3>Personal Dashboard</h3>
-
-          <p>
-            Приложение для управления задачами,
-            учёбой и финансами.
-          </p>
-
-          <a href="project.html">Посмотреть</a>
-        </div>
-
-        <div class="project">
-          <h3>Telegram Bot</h3>
-
-          <p>
-            Telegram-бот на Python
-            для автоматизации различных задач.
-          </p>
-
-          <a href="project.html">Посмотреть</a>
-        </div>
-
+          <p>Личный проект для организации задач, учёбы и финансов.</p>
+          <ul class="tag-list" aria-label="Технологии">
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+          <a class="text-link" href="project.html">О проекте <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-card-top"><span class="project-type">Python project</span><span class="project-arrow"
+              aria-hidden="true">↗</span></div>
+          <h3>Auto Confirm Bot</h3>
+          <p>Telegram-бот для записи клиентов, управления свободными слотами и автоматических напоминаний о записи.</p>
+          <ul class="tag-list" aria-label="Технологии">
+            <li>Python</li>
+            <li>Aiogram</li>
+            <li>SQLite</li>
+            <li>Telegram Bot API</li>
+          </ul>
+          <a class="text-link" href="https://github.com/malkree/auto_confirm_bot" target="_blank"
+            rel="noopener noreferrer">Открыть GitHub <span aria-hidden="true">↗</span></a>
+        </article>
       </div>
     </section>
-
   </main>
 
-  <footer>
-    <p>Моё портфолио © 2026</p>
+  <footer class="site-footer">
+    <div class="page-width footer-inner"><a class="logo" href="index.html">Роман<span>.</span></a>
+      <p>© 2026 · Портфолио</p>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
-
 </body>
 
 </html>
